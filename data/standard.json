@@ -1,0 +1,753 @@
+{
+  "orders": [
+    {
+      "id": "o0",
+      "merchant": "m0",
+      "slots": 2,
+      "promised_at": 40,
+      "partition": "train"
+    },
+    {
+      "id": "o1",
+      "merchant": "m1",
+      "slots": 1,
+      "promised_at": 41,
+      "partition": "train"
+    },
+    {
+      "id": "o2",
+      "merchant": "m2",
+      "slots": 1,
+      "promised_at": 42,
+      "partition": "train"
+    },
+    {
+      "id": "o3",
+      "merchant": "m0",
+      "slots": 1,
+      "promised_at": 43,
+      "partition": "train"
+    },
+    {
+      "id": "o4",
+      "merchant": "m1",
+      "slots": 2,
+      "promised_at": 44,
+      "partition": "train"
+    },
+    {
+      "id": "o5",
+      "merchant": "m2",
+      "slots": 1,
+      "promised_at": 40,
+      "partition": "train"
+    },
+    {
+      "id": "o6",
+      "merchant": "m0",
+      "slots": 1,
+      "promised_at": 41,
+      "partition": "evaluation"
+    },
+    {
+      "id": "o7",
+      "merchant": "m1",
+      "slots": 1,
+      "promised_at": 42,
+      "partition": "evaluation"
+    },
+    {
+      "id": "o8",
+      "merchant": "m2",
+      "slots": 2,
+      "promised_at": 43,
+      "partition": "evaluation"
+    },
+    {
+      "id": "o9",
+      "merchant": "m0",
+      "slots": 1,
+      "promised_at": 44,
+      "partition": "evaluation"
+    },
+    {
+      "id": "o10",
+      "merchant": "m1",
+      "slots": 1,
+      "promised_at": 40,
+      "partition": "evaluation"
+    },
+    {
+      "id": "o11",
+      "merchant": "m2",
+      "slots": 1,
+      "promised_at": 41,
+      "partition": "evaluation"
+    },
+    {
+      "id": "o12",
+      "merchant": "m0",
+      "slots": 2,
+      "promised_at": 42,
+      "partition": "evaluation"
+    },
+    {
+      "id": "o13",
+      "merchant": "m1",
+      "slots": 1,
+      "promised_at": 43,
+      "partition": "evaluation"
+    },
+    {
+      "id": "o14",
+      "merchant": "m2",
+      "slots": 1,
+      "promised_at": 44,
+      "partition": "evaluation"
+    },
+    {
+      "id": "o15",
+      "merchant": "m0",
+      "slots": 1,
+      "promised_at": 40,
+      "partition": "evaluation"
+    },
+    {
+      "id": "o16",
+      "merchant": "m1",
+      "slots": 2,
+      "promised_at": 41,
+      "partition": "evaluation"
+    },
+    {
+      "id": "o17",
+      "merchant": "m2",
+      "slots": 1,
+      "promised_at": 42,
+      "partition": "evaluation"
+    }
+  ],
+  "receipts": [
+    {
+      "id": "r0",
+      "units_consumed": 1,
+      "arrived_at": 38,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r1",
+      "units_consumed": 1,
+      "arrived_at": 39,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r2",
+      "units_consumed": 1,
+      "arrived_at": 40,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r3",
+      "units_consumed": 1,
+      "arrived_at": 41,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r4",
+      "units_consumed": 1,
+      "arrived_at": 42,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r5",
+      "units_consumed": 1,
+      "arrived_at": 43,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r6",
+      "units_consumed": 1,
+      "arrived_at": 44,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r7",
+      "units_consumed": 1,
+      "arrived_at": 45,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r8",
+      "units_consumed": 1,
+      "arrived_at": 46,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r9",
+      "units_consumed": 1,
+      "arrived_at": 38,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r10",
+      "units_consumed": 1,
+      "arrived_at": 39,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r11",
+      "units_consumed": 1,
+      "arrived_at": 40,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r12",
+      "units_consumed": 1,
+      "arrived_at": 41,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r13",
+      "units_consumed": 1,
+      "arrived_at": 42,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r14",
+      "units_consumed": 1,
+      "arrived_at": 43,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r15",
+      "units_consumed": 1,
+      "arrived_at": 44,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r16",
+      "units_consumed": 1,
+      "arrived_at": 45,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r17",
+      "units_consumed": 1,
+      "arrived_at": 46,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r18",
+      "units_consumed": 1,
+      "arrived_at": 38,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r19",
+      "units_consumed": 1,
+      "arrived_at": 39,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r20",
+      "units_consumed": 1,
+      "arrived_at": 40,
+      "parcel_capacity": 1
+    },
+    {
+      "id": "r21",
+      "units_consumed": 1,
+      "arrived_at": 41,
+      "parcel_capacity": 1
+    }
+  ],
+  "candidates": [
+    {
+      "order": "o0",
+      "receipt": "r0",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 2,
+        "shared_phone": true
+      }
+    },
+    {
+      "order": "o1",
+      "receipt": "r0",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 2,
+        "shared_phone": true
+      }
+    },
+    {
+      "order": "o1",
+      "receipt": "r1",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 3,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o2",
+      "receipt": "r1",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 3,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o2",
+      "receipt": "r2",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 4,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o3",
+      "receipt": "r2",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 4,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o3",
+      "receipt": "r3",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 5,
+        "shared_phone": true
+      }
+    },
+    {
+      "order": "o4",
+      "receipt": "r3",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 5,
+        "shared_phone": true
+      }
+    },
+    {
+      "order": "o4",
+      "receipt": "r4",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 2,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o5",
+      "receipt": "r4",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 2,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o5",
+      "receipt": "r5",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 3,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o6",
+      "receipt": "r5",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 3,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o6",
+      "receipt": "r6",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 4,
+        "shared_phone": true
+      }
+    },
+    {
+      "order": "o7",
+      "receipt": "r6",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 4,
+        "shared_phone": true
+      }
+    },
+    {
+      "order": "o7",
+      "receipt": "r7",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 5,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o8",
+      "receipt": "r7",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 5,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o8",
+      "receipt": "r8",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 2,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o9",
+      "receipt": "r8",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 2,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o9",
+      "receipt": "r9",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 3,
+        "shared_phone": true
+      }
+    },
+    {
+      "order": "o10",
+      "receipt": "r9",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 3,
+        "shared_phone": true
+      }
+    },
+    {
+      "order": "o10",
+      "receipt": "r10",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 4,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o11",
+      "receipt": "r10",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 4,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o11",
+      "receipt": "r11",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 5,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o12",
+      "receipt": "r11",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 5,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o12",
+      "receipt": "r12",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 2,
+        "shared_phone": true
+      }
+    },
+    {
+      "order": "o13",
+      "receipt": "r12",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 2,
+        "shared_phone": true
+      }
+    },
+    {
+      "order": "o13",
+      "receipt": "r13",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 3,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o14",
+      "receipt": "r13",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 3,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o14",
+      "receipt": "r14",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 4,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o15",
+      "receipt": "r14",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 4,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o15",
+      "receipt": "r15",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 5,
+        "shared_phone": true
+      }
+    },
+    {
+      "order": "o16",
+      "receipt": "r15",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 5,
+        "shared_phone": true
+      }
+    },
+    {
+      "order": "o16",
+      "receipt": "r16",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 2,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o17",
+      "receipt": "r16",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 2,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o17",
+      "receipt": "r17",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 3,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o0",
+      "receipt": "r17",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 3,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o0",
+      "receipt": "r18",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 4,
+        "shared_phone": true
+      }
+    },
+    {
+      "order": "o1",
+      "receipt": "r18",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 4,
+        "shared_phone": true
+      }
+    },
+    {
+      "order": "o1",
+      "receipt": "r19",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 5,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o2",
+      "receipt": "r19",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 5,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o2",
+      "receipt": "r20",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 2,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o3",
+      "receipt": "r20",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 2,
+        "shared_phone": false
+      }
+    },
+    {
+      "order": "o3",
+      "receipt": "r21",
+      "score": 0.95,
+      "features": {
+        "address_similarity": 0.9,
+        "time_gap": 3,
+        "shared_phone": true
+      }
+    },
+    {
+      "order": "o4",
+      "receipt": "r21",
+      "score": 0.87,
+      "features": {
+        "address_similarity": 0.8,
+        "time_gap": 3,
+        "shared_phone": true
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "revision": 1,
+      "action": "accept",
+      "order": "o0",
+      "receipt": "r0"
+    },
+    {
+      "revision": 2,
+      "action": "reject",
+      "order": "o1",
+      "receipt": "r0"
+    }
+  ],
+  "ground_truth": [
+    {
+      "order": "o0",
+      "receipt": "r0",
+      "match": true
+    },
+    {
+      "order": "o1",
+      "receipt": "r1",
+      "match": true
+    },
+    {
+      "order": "o2",
+      "receipt": "r2",
+      "match": true
+    },
+    {
+      "order": "o3",
+      "receipt": "r3",
+      "match": true
+    },
+    {
+      "order": "o4",
+      "receipt": "r4",
+      "match": true
+    },
+    {
+      "order": "o5",
+      "receipt": "r5",
+      "match": true
+    }
+  ],
+  "compensation_threshold": 0.85
+}
