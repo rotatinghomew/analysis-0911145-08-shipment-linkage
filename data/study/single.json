@@ -1,0 +1,48 @@
+{
+  "kind": "diagnosis",
+  "graph_version": "storage-3",
+  "nodes": [
+    {
+      "id": "damage",
+      "states": [
+        "no",
+        "yes"
+      ],
+      "parents": [],
+      "rows": [
+        {
+          "when": {},
+          "probabilities": [
+            [
+              0.75,
+              0.75
+            ],
+            [
+              0.25,
+              0.25
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": [],
+  "actions": [
+    {
+      "id": "ordinary",
+      "loss_by_damage": [
+        0,
+        30
+      ]
+    },
+    {
+      "id": "inspect",
+      "loss_by_damage": [
+        5,
+        8
+      ]
+    }
+  ],
+  "available_tests": [],
+  "budget": 3
+}

@@ -37,3 +37,11 @@ class TransportTests(unittest.TestCase):
 
     def test_snapshot_changes_with_content(self):
         self.assertNotEqual(load_case('standard')['_snapshot'], load_case('edge')['_snapshot'])
+
+    def test_study_previews_over_real_http(self):
+        from app.study_store import load_case as load_study, names as study_names
+        self.assertEqual(request(self.base, "/study-cases")["cases"], study_names())
+        for case in study_names():
+            result = request(self.base, "/study-preview", {"case": case})
+            self.assertEqual(result["snapshot"], load_study(case)["_snapshot"])
+            self.assertTrue(result["descriptive_only"])

@@ -1,8 +1,5 @@
-# 行为验证
+# 运行与验证
 
-- 容量约束下的全局记录联结
-- 人工确认与排除的反馈闭包
-- 匹配不确定性向指标传播
-- 复核优先级与校准诊断
+现有业务预览、资料校验及真实 HTTP 传输由 `python -m unittest discover -s tests -v` 验证；`python -m app.demo` 临时启动服务，通过消费端读取旧业务和新资料的描述输出。固定依赖的安装和容器准备方法见 README。
 
-tests/test_domain.py 覆盖现有业务口径；tests/test_transport.py 通过真实本地 HTTP 验证数据到消费端。tests/test_acceptance.py 是新接口的公开契约测试，完成新能力后以 RUN_ACCEPTANCE=1 启用。它不替代统计正确性、不可识别性、组合约束和敏感性回归；请按 contracts.md 补足针对算法设计的测试。新接口不得通过固定 fixture 名称返回预制结论。
+`RUN_ACCEPTANCE=1 python -m unittest tests.test_acceptance -v` 用于新分析消费接口接通后的基本字段与信息不足契约，当前默认跳过。该测试不是算法正确性的证明，需结合产品约定补充相应的小规模可核对计算、敏感性及信息截止回归。完成后演示应请求真实分析路由，不按资料名返回静态结论；正式展示不安装依赖，资料规模允许在 90 秒内结束。

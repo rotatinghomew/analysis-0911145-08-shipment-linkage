@@ -3,6 +3,8 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlsplit
 
 from app.store import load_case, names
+from app.study_store import load_case as load_study, names as study_names
+from app.study import preview as study_preview
 from app.linkage import preview
 
 
@@ -21,6 +23,8 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/health':
             self.send_json(200, {'status': 'ok'})
+        elif self.path == '/study-cases':
+            self.send_json(200, {'cases': study_names()})
         elif self.path == '/cases':
             self.send_json(200, {'cases': names()})
         else:
@@ -32,6 +36,9 @@ class Handler(BaseHTTPRequestHandler):
             if not 0 < length <= 1048576:
                 raise ValueError('invalid body size')
             request = json.loads(self.rfile.read(length))
+            if urlsplit(self.path).path == '/study-preview':
+                self.send_json(200, study_preview(load_study(request['case'])))
+                return
             case = load_case(request['case'])
             if urlsplit(self.path).path != '/preview':
                 self.send_json(404, {'error': 'unknown route'})
