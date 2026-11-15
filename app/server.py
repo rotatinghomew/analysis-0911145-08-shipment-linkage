@@ -5,6 +5,7 @@ from urllib.parse import urlsplit
 from app.store import load_case, names
 from app.study_store import load_case as load_study, names as study_names
 from app.study import preview as study_preview
+from app.inference import analyze as evidence_diagnosis
 from app.linkage import preview
 
 
@@ -35,15 +36,20 @@ class Handler(BaseHTTPRequestHandler):
             length = int(self.headers.get('Content-Length', '0'))
             if not 0 < length <= 1048576:
                 raise ValueError('invalid body size')
-            request = json.loads(self.rfile.read(length))
-            if urlsplit(self.path).path == '/study-preview':
-                self.send_json(200, study_preview(load_study(request['case'])))
-                return
-            case = load_case(request['case'])
-            if urlsplit(self.path).path != '/preview':
+            route = urlsplit(self.path).path
+            if route not in ('/preview', '/study-preview', '/evidence-diagnosis'):
                 self.send_json(404, {'error': 'unknown route'})
                 return
-            self.send_json(200, preview(case))
+            request = json.loads(self.rfile.read(length))
+            if route == '/study-preview':
+                self.send_json(200, study_preview(load_study(request['case'])))
+            elif route == '/evidence-diagnosis':
+                self.send_json(200, evidence_diagnosis(
+                    load_study(request['case']),
+                    exclude_evidence=request.get('exclude_evidence'),
+                    budget=request.get('budget')))
+            else:
+                self.send_json(200, preview(load_case(request['case'])))
         except (ValueError, KeyError, TypeError) as error:
             self.send_json(400, {'error': str(error)})
 

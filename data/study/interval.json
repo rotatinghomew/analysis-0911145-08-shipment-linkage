@@ -1,0 +1,286 @@
+{
+  "kind": "diagnosis",
+  "graph_version": "storage-3",
+  "nodes": [
+    {
+      "id": "maturity",
+      "states": [
+        "normal",
+        "high"
+      ],
+      "parents": [],
+      "rows": [
+        {
+          "when": {},
+          "probabilities": [
+            [
+              0.67,
+              0.73
+            ],
+            [
+              0.27,
+              0.33
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "warm",
+      "states": [
+        "no",
+        "yes"
+      ],
+      "parents": [],
+      "rows": [
+        {
+          "when": {},
+          "probabilities": [
+            [
+              0.72,
+              0.78
+            ],
+            [
+              0.22,
+              0.28
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "damage",
+      "states": [
+        "no",
+        "yes"
+      ],
+      "parents": [
+        "maturity",
+        "warm"
+      ],
+      "rows": [
+        {
+          "when": {
+            "maturity": "normal",
+            "warm": "no"
+          },
+          "probabilities": [
+            [
+              0.92,
+              0.98
+            ],
+            [
+              0.02,
+              0.08
+            ]
+          ]
+        },
+        {
+          "when": {
+            "maturity": "normal",
+            "warm": "yes"
+          },
+          "probabilities": [
+            [
+              0.6,
+              0.66
+            ],
+            [
+              0.34,
+              0.4
+            ]
+          ]
+        },
+        {
+          "when": {
+            "maturity": "high",
+            "warm": "no"
+          },
+          "probabilities": [
+            [
+              0.72,
+              0.78
+            ],
+            [
+              0.22,
+              0.28
+            ]
+          ]
+        },
+        {
+          "when": {
+            "maturity": "high",
+            "warm": "yes"
+          },
+          "probabilities": [
+            [
+              0.44,
+              0.5
+            ],
+            [
+              0.5,
+              0.56
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "logger",
+      "states": [
+        "clear",
+        "warning"
+      ],
+      "parents": [
+        "warm"
+      ],
+      "rows": [
+        {
+          "when": {
+            "warm": "no"
+          },
+          "probabilities": [
+            [
+              0.86,
+              0.91
+            ],
+            [
+              0.09,
+              0.14
+            ]
+          ]
+        },
+        {
+          "when": {
+            "warm": "yes"
+          },
+          "probabilities": [
+            [
+              0.17,
+              0.23
+            ],
+            [
+              0.77,
+              0.83
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "arrival",
+      "node": "damage",
+      "likelihood": [
+        0.5,
+        0.95
+      ],
+      "source": "dock_photo"
+    },
+    {
+      "id": "sensor",
+      "node": "logger",
+      "likelihood": [
+        0.5,
+        0.8
+      ],
+      "source": "temp_logger"
+    }
+  ],
+  "actions": [
+    {
+      "id": "ordinary",
+      "loss_by_damage": [
+        0,
+        12
+      ]
+    },
+    {
+      "id": "inspect",
+      "loss_by_damage": [
+        4,
+        7
+      ]
+    }
+  ],
+  "available_tests": [
+    {
+      "id": "thermal_trace",
+      "node": "warm",
+      "cost": 0.3,
+      "probabilities": [
+        [
+          0.85,
+          0.15
+        ],
+        [
+          0.2,
+          0.8
+        ]
+      ],
+      "report_states": [
+        "no",
+        "yes"
+      ]
+    },
+    {
+      "id": "lab_maturity",
+      "node": "maturity",
+      "cost": 1.0,
+      "probabilities": [
+        [
+          0.95,
+          0.05
+        ],
+        [
+          0.15,
+          0.85
+        ]
+      ],
+      "report_states": [
+        "normal",
+        "high"
+      ]
+    },
+    {
+      "id": "damage_scan",
+      "node": "damage",
+      "cost": 1.0,
+      "probabilities": [
+        [
+          0.95,
+          0.05
+        ],
+        [
+          0.05,
+          0.95
+        ]
+      ],
+      "report_states": [
+        "no",
+        "yes"
+      ]
+    },
+    {
+      "id": "full_recheck",
+      "node": "damage",
+      "cost": 8.0,
+      "probabilities": [
+        [
+          0.99,
+          0.01
+        ],
+        [
+          0.01,
+          0.99
+        ]
+      ],
+      "report_states": [
+        "no",
+        "yes"
+      ]
+    }
+  ],
+  "budget": 3
+}

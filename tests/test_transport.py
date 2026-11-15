@@ -45,3 +45,19 @@ class TransportTests(unittest.TestCase):
             result = request(self.base, "/study-preview", {"case": case})
             self.assertEqual(result["snapshot"], load_study(case)["_snapshot"])
             self.assertTrue(result["descriptive_only"])
+
+    def test_evidence_diagnosis_over_real_http(self):
+        from app.study_store import load_case as load_study, names as study_names
+        for case in study_names():
+            result = request(self.base, '/evidence-diagnosis', {'case': case})
+            self.assertEqual(result['snapshot'], load_study(case)['_snapshot'])
+            self.assertIn(result['compatibility']['status'], ('compatible', 'incompatible'))
+            json.dumps(result, allow_nan=False)
+
+    def test_unknown_analysis_route_is_not_found(self):
+        result = request(self.base, '/study-cases')
+        self.assertIn('cases', result)
+        with self.assertRaises(HTTPError) as caught:
+            request(self.base, '/diagnose-other', {'case': 'standard'})
+        self.assertEqual(caught.exception.code, 404)
+        caught.exception.close()
